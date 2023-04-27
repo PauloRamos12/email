@@ -7,18 +7,18 @@ function App(){
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
-  function sendEmail(e){
-    e.preventDefault();
+function sendEmail(e){
+  e.preventDefault();
     if(name === '' || email === '' || message === '' ){
       alert("Preencha todos os campos")
       return;
     }
-    const templateParams = {
-      from_name: name,
-      message: message,
-      email: email
+  const templateParams = {
+    from_name: name,
+    message: message,
+    email: email
     }
-    emailjs.send("service_ctaroxq", "template_qamjc3i", templateParams, "dlrJXcoAHoGBxIqDT")
+  emailjs.send("service_ctaroxq", "template_qamjc3i", templateParams, "dlrJXcoAHoGBxIqDT")
     .then((response) => {
       console.log("Email enviado", response.status, response.text)
       setName('')
