@@ -31,7 +31,7 @@ function sendEmail(e){
 
   return (
     <div className='container'>
-      <h1 className='title'>Deixe aqui o seu contato 🤙 </h1>
+      <h1 className='title'>Deixe aqui abaixo o seu contato</h1>
 
       <form className='form' onSubmit={sendEmail}>
         <input
